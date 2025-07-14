@@ -72,7 +72,7 @@ const Navbar = () => (
   <nav className="bg-white shadow mb-6">
     <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
       <h1 className="text-2xl font-bold text-indigo-700">Engagement Agent</h1>
-      <div className="space-x-6">
+      <div className="space-x-12">
         <Link href="/" className="text-gray-700 hover:text-indigo-600 font-medium">
           Learner View
         </Link>
@@ -103,7 +103,7 @@ export default function LearnerProfile() {
     <div className="bg-gray-50 min-h-screen">
       <Navbar />
       <div className="max-w-7xl mx-auto p-6">
-        <header className="flex items-center space-x-6 mb-8">
+        <header className="flex items-center space-x-12 mb-8">
           <img
             src={learner.photo}
             alt={`${learner.name} photo`}
