@@ -43,7 +43,7 @@ export default function LearnerView() {
             <p className="text-sm">Excited to begin my next chapter as Director of Sales Enablement!</p>
           </div>
           <div className="bg-white rounded-2xl shadow p-6">
-            <h2 className="font-semibold text-skilljar-dark mb-2">Linkindn</h2>
+            <h2 className="font-semibold text-skilljar-dark mb-2">LinkedIn</h2>
             <p className="text-sm">Recent Job Change: June 15, 2025</p>
             <p className="text-sm">Global Sales Summit insights</p>
             <p className="text-sm">New partnership announcement</p>
