@@ -8,7 +8,7 @@ export default function LearnerView() {
         <h1 className="text-xl mb-4 text-gray-600">Home</h1>
         <div className="flex items-center gap-6 mb-8">
           <Image
-            src="/images/jane.jpg"
+            src="/images/jane.png"
             alt="Jane Smith"
             width={80}
             height={80}
