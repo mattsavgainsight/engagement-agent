@@ -1,4 +1,3 @@
-// pages/index.js
 import SidebarLayout from "../components/SidebarLayout";
 
 export default function LearnerView() {
