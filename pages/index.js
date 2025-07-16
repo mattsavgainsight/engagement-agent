@@ -1,47 +1,70 @@
-import SidebarLayout from "../components/SidebarLayout";
+// pages/learner.js
+import React from 'react';
 
-export default function LearnerView() {
+const janePhotoUrl = '/images/jane-profile.jpg'; // Make sure to put Jane's photo here
+
+export default function LearnerProfile() {
   return (
-    <SidebarLayout>
-      <h1 className="text-3xl font-bold text-skilljar-dark mb-6">Learner Profile: Jane Smith</h1>
-
-      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-        <div className="bg-white shadow rounded-lg p-6">
-          <h2 className="font-semibold text-skilljar-dark mb-2">Skilljar Activity</h2>
-          <p>Courses Completed: 12</p>
-          <p>Last Activity: July 10, 2025</p>
+    <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
+      <header className="bg-white shadow-sm sticky top-0 z-10">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center space-x-4">
+          <img src={janePhotoUrl} alt="Jane Doe" className="w-14 h-14 rounded-full object-cover" />
+          <h1 className="text-2xl font-semibold text-skilljar-blue">Jane Doe's Profile</h1>
         </div>
+      </header>
 
-        <div className="bg-white shadow rounded-lg p-6">
-          <h2 className="font-semibold text-skilljar-dark mb-2">Salesforce</h2>
-          <p>Status: Premium</p>
-          <p>Open Cases: 2</p>
-        </div>
+      <main className="max-w-5xl mx-auto px-6 py-10 space-y-8">
+        <section className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-semibold mb-4 text-skilljar-blue">Learning Summary</h2>
+          <p>Welcome back, Jane! Here's your recent activity and progress in your courses.</p>
 
-        <div className="bg-white shadow rounded-lg p-6">
-          <h2 className="font-semibold text-skilljar-dark mb-2">Gainsight</h2>
-          <p>Health Score: 82</p>
-          <p>Risk Level: Low</p>
-        </div>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-skilljar-lightblue rounded p-4 text-center">
+              <h3 className="text-lg font-semibold text-skilljar-darkblue">Courses Completed</h3>
+              <p className="text-3xl font-bold mt-2">7</p>
+            </div>
+            <div className="bg-skilljar-lightblue rounded p-4 text-center">
+              <h3 className="text-lg font-semibold text-skilljar-darkblue">Hours Spent</h3>
+              <p className="text-3xl font-bold mt-2">24</p>
+            </div>
+            <div className="bg-skilljar-lightblue rounded p-4 text-center">
+              <h3 className="text-lg font-semibold text-skilljar-darkblue">Active Cohorts</h3>
+              <p className="text-3xl font-bold mt-2">3</p>
+            </div>
+          </div>
+        </section>
 
-        <div className="bg-white shadow rounded-lg p-6 col-span-2">
-          <h2 className="font-semibold text-skilljar-dark mb-2">LinkedIn</h2>
-          <p>Recent Job Change: June 15, 2025</p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Global Sales Summit insights</li>
-            <li>New partnership announcement</li>
+        <section className="bg-white rounded-lg shadow p-6">
+          <h2 className="text-xl font-semibold mb-4 text-skilljar-blue">Recommended Courses</h2>
+          <ul className="space-y-3">
+            <li className="p-4 border border-gray-200 rounded hover:shadow-md cursor-pointer transition">
+              <strong className="text-skilljar-darkblue">Advanced Product Training</strong>
+              <p className="text-gray-600 text-sm">Boost your skills with advanced techniques.</p>
+            </li>
+            <li className="p-4 border border-gray-200 rounded hover:shadow-md cursor-pointer transition">
+              <strong className="text-skilljar-darkblue">Customer Success Strategies</strong>
+              <p className="text-gray-600 text-sm">Learn how to maximize customer engagement.</p>
+            </li>
           </ul>
-        </div>
+        </section>
+      </main>
 
-        <div className="bg-white shadow rounded-lg p-6 col-span-2">
-          <h2 className="font-semibold text-skilljar-dark mb-2">Recommendations</h2>
-          <ul className="list-disc list-inside">
-            <li>Email for job promotion</li>
-            <li>Suggest retention course</li>
-            <li>Instagram story re-engagement</li>
-          </ul>
-        </div>
-      </section>
-    </SidebarLayout>
+      <style jsx>{`
+        :root {
+          --skilljar-blue: #0052CC;
+          --skilljar-darkblue: #003D99;
+          --skilljar-lightblue: #E6F0FF;
+        }
+        .text-skilljar-blue {
+          color: var(--skilljar-blue);
+        }
+        .text-skilljar-darkblue {
+          color: var(--skilljar-darkblue);
+        }
+        .bg-skilljar-lightblue {
+          background-color: var(--skilljar-lightblue);
+        }
+      `}</style>
+    </div>
   );
 }
