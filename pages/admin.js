@@ -1,85 +1,70 @@
 // pages/admin.js
-import React from 'react';
-
-const janePhotoUrl = '/images/jane-profile.jpg';
-
-const mockEngagements = [
-  {
-    id: 1,
-    learner: 'Jane Doe',
-    course: 'Advanced Product Training',
-    lastActive: '2025-07-15',
-    status: 'At Risk',
-  },
-  {
-    id: 2,
-    learner: 'John Smith',
-    course: 'Customer Success Strategies',
-    lastActive: '2025-07-14',
-    status: 'Active',
-  },
-];
+import SidebarLayout from "../components/SidebarLayout";
 
 export default function AdminDashboard() {
-  return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-900">
-      <header className="bg-white shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center space-x-4">
-          <img src={janePhotoUrl} alt="Admin" className="w-14 h-14 rounded-full object-cover" />
-          <h1 className="text-2xl font-semibold text-skilljar-blue">Admin Engagement Dashboard</h1>
-        </div>
-      </header>
+  const stats = [
+    { label: "Total Learners", value: 1234 },
+    { label: "Active This Month", value: 876 },
+    { label: "Re-engagements Sent", value: 210 },
+    { label: "Open Support Cases", value: 35 },
+  ];
 
-      <main className="max-w-6xl mx-auto px-6 py-10">
-        <section className="bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-6 text-skilljar-blue">Learner Engagement Status</h2>
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-gray-300">
-                <th className="py-2 px-4">Learner</th>
-                <th className="py-2 px-4">Course</th>
-                <th className="py-2 px-4">Last Active</th>
-                <th className="py-2 px-4">Status</th>
+  const recentEngagements = [
+    { id: 1, learner: "Jane Smith", action: "Email Sent", date: "2025-07-12" },
+    { id: 2, learner: "John Doe", action: "SMS Reminder", date: "2025-07-11" },
+    { id: 3, learner: "Alice Johnson", action: "Course Recommendation", date: "2025-07-10" },
+  ];
+
+  return (
+    <SidebarLayout>
+      <h1 className="text-2xl font-bold text-skilljar-darkblue mb-6">Admin Dashboard</h1>
+
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+        {stats.map((s, i) => (
+          <div key={i} className="bg-white rounded-2xl shadow p-6 text-center">
+            <p className="text-3xl font-bold text-skilljar-darkblue">{s.value}</p>
+            <p className="mt-2 text-sm text-gray-600">{s.label}</p>
+          </div>
+        ))}
+      </section>
+
+      <section>
+        <h2 className="text-xl font-semibold text-skilljar-darkblue mb-4">Recent Engagements</h2>
+        <div className="bg-white rounded-2xl shadow overflow-x-auto">
+          <table className="min-w-full text-sm">
+            <thead className="bg-gray-100 text-skilljar-darkblue">
+              <tr>
+                <th className="text-left py-3 px-6">Learner</th>
+                <th className="text-left py-3 px-6">Action</th>
+                <th className="text-left py-3 px-6">Date</th>
               </tr>
             </thead>
             <tbody>
-              {mockEngagements.map(({ id, learner, course, lastActive, status }) => (
-                <tr
-                  key={id}
-                  className={`border-b border-gray-200 ${
-                    status === 'At Risk' ? 'bg-red-50' : 'bg-white'
-                  }`}
-                >
-                  <td className="py-3 px-4 font-medium">{learner}</td>
-                  <td className="py-3 px-4">{course}</td>
-                  <td className="py-3 px-4">{lastActive}</td>
-                  <td
-                    className={`py-3 px-4 font-semibold ${
-                      status === 'At Risk' ? 'text-red-600' : 'text-green-600'
-                    }`}
-                  >
-                    {status}
-                  </td>
+              {recentEngagements.map((e) => (
+                <tr key={e.id} className="border-t hover:bg-gray-50">
+                  <td className="py-3 px-6">{e.learner}</td>
+                  <td className="py-3 px-6">{e.action}</td>
+                  <td className="py-3 px-6">{new Date(e.date).toLocaleDateString()}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </section>
-
-        <section className="mt-10 bg-white rounded-lg shadow p-6">
-          <h2 className="text-xl font-semibold mb-4 text-skilljar-blue">Actions</h2>
-          <p>Select a learner to send personalized outreach or track progress.</p>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <style jsx>{`
         :root {
-          --skilljar-blue: #0052CC;
+          --skilljar-blue: #0052cc;
+          --skilljar-darkblue: #003d99;
+          --skilljar-lightblue: #e6f0ff;
         }
-        .text-skilljar-blue {
-          color: var(--skilljar-blue);
+        .text-skilljar-darkblue {
+          color: var(--skilljar-darkblue);
+        }
+        .bg-skilljar-lightblue {
+          background-color: var(--skilljar-lightblue);
         }
       `}</style>
-    </div>
+    </SidebarLayout>
   );
 }
