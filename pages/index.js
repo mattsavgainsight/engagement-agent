@@ -24,19 +24,16 @@ export default function LearnerView() {
           <p className="text-sm">Courses Completed: <strong>12</strong></p>
           <p className="text-sm">Last Activity: July 10, 2025</p>
         </div>
-
         <div className="bg-white rounded-2xl shadow p-6">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">Salesforce</h2>
           <p className="text-sm">Status: <strong>Premium</strong></p>
           <p className="text-sm">Open Cases: 2</p>
         </div>
-
         <div className="bg-white rounded-2xl shadow p-6">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">Gainsight</h2>
           <p className="text-sm">Health Score: 82</p>
           <p className="text-sm">Risk Level: Low</p>
         </div>
-
         <div className="bg-white rounded-2xl shadow p-6 xl:col-span-2">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">LinkedIn</h2>
           <ul className="text-sm list-disc list-inside">
@@ -45,14 +42,13 @@ export default function LearnerView() {
             <li>New partnership announcement</li>
           </ul>
         </div>
-
         <div className="bg-white rounded-2xl shadow p-6 xl:col-span-2">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">Instagram Activity</h2>
           <Image
             src="/images/instagram-mock.jpg"
-            alt="Instagram post"
-            width={300}
-            height={200}
+            alt="Instagram Post"
+            width={320}
+            height={180}
             className="rounded mb-2"
           />
           <p className="text-sm italic">"Excited to lead training at the Global Sales Summit!"</p>
@@ -60,4 +56,4 @@ export default function LearnerView() {
       </section>
     </SidebarLayout>
   );
-};
+}
