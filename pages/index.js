@@ -1,4 +1,3 @@
-// pages/index.js
 import SidebarLayout from "../components/SidebarLayout";
 import Image from "next/image";
 
@@ -7,7 +6,7 @@ export default function LearnerView() {
     <SidebarLayout>
       <div className="flex items-center gap-6 mb-8">
         <Image
-          src="https://randomuser.me/api/portraits/women/44.jpg"
+          src="/images/jane.jpg"
           alt="Jane Smith"
           width={80}
           height={80}
@@ -22,17 +21,13 @@ export default function LearnerView() {
       <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         <div className="bg-white rounded-2xl shadow p-6">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">Skilljar Activity</h2>
-          <p className="text-sm">
-            Courses Completed: <strong>12</strong>
-          </p>
+          <p className="text-sm">Courses Completed: <strong>12</strong></p>
           <p className="text-sm">Last Activity: July 10, 2025</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow p-6">
           <h2 className="font-semibold text-skilljar-darkblue mb-2">Salesforce</h2>
-          <p className="text-sm">
-            Status: <strong>Premium</strong>
-          </p>
+          <p className="text-sm">Status: <strong>Premium</strong></p>
           <p className="text-sm">Open Cases: 2</p>
         </div>
 
@@ -52,31 +47,17 @@ export default function LearnerView() {
         </div>
 
         <div className="bg-white rounded-2xl shadow p-6 xl:col-span-2">
-          <h2 className="font-semibold text-skilljar-darkblue mb-2">Re-engagement Suggestions</h2>
-          <ul className="text-sm list-disc list-inside">
-            <li>Congratulatory email for job promotion</li>
-            <li>Recommend advanced product training course</li>
-            <li>Trigger Instagram remarketing campaign</li>
-          </ul>
+          <h2 className="font-semibold text-skilljar-darkblue mb-2">Instagram Activity</h2>
+          <Image
+            src="/images/instagram-mock.jpg"
+            alt="Instagram post"
+            width={300}
+            height={200}
+            className="rounded mb-2"
+          />
+          <p className="text-sm italic">"Excited to lead training at the Global Sales Summit!"</p>
         </div>
       </section>
-
-      <style jsx>{`
-        :root {
-          --skilljar-blue: #0052cc;
-          --skilljar-darkblue: #003d99;
-          --skilljar-lightblue: #e6f0ff;
-        }
-        .text-skilljar-darkblue {
-          color: var(--skilljar-darkblue);
-        }
-        .border-skilljar-darkblue {
-          border-color: var(--skilljar-darkblue);
-        }
-        .bg-skilljar-lightblue {
-          background-color: var(--skilljar-lightblue);
-        }
-      `}</style>
     </SidebarLayout>
   );
-}
+};
