@@ -8,4 +8,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+}// tailwind.config.js
+theme: {
+  extend: {
+    colors: {
+      'skilljar-dark': '#0f1d3b',
+    },
+  },
+},
