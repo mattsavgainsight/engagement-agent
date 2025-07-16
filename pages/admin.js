@@ -1,7 +1,7 @@
 // pages/admin.js
 import React from 'react';
 
-const janePhotoUrl = '/images/jane-profile.jpg'; // Same photo used for admin if needed
+const janePhotoUrl = '/images/jane-profile.jpg';
 
 const mockEngagements = [
   {
@@ -69,15 +69,12 @@ export default function AdminDashboard() {
         <section className="mt-10 bg-white rounded-lg shadow p-6">
           <h2 className="text-xl font-semibold mb-4 text-skilljar-blue">Actions</h2>
           <p>Select a learner to send personalized outreach or track progress.</p>
-          {/* Placeholder for action buttons or forms */}
         </section>
       </main>
 
       <style jsx>{`
         :root {
           --skilljar-blue: #0052CC;
-          --skilljar-darkblue: #003D99;
-          --skilljar-lightblue: #E6F0FF;
         }
         .text-skilljar-blue {
           color: var(--skilljar-blue);
