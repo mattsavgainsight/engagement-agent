@@ -1,7 +1,7 @@
-// pages/learner.js
+// pages/index.js
 import React from 'react';
 
-const janePhotoUrl = '/images/jane-profile.jpg'; // Make sure to put Jane's photo here
+const janePhotoUrl = '/images/jane-profile.jpg'; // Make sure Jane's photo is here
 
 export default function LearnerProfile() {
   return (
