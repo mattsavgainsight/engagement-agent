@@ -40,20 +40,20 @@ export default function LearnerView() {
               className="rounded mb-2"
             />
             <p className="text-xs text-gray-500">Instagram</p>
-            <p className="text-sm">Excited to begin my next chapter as Director of Sales Enablement!</p>
+            <p className="text-sm">Two weeks on the river was all I needed to recharge!</p>
           </div>
           <div className="bg-white rounded-2xl shadow p-6">
             <h2 className="font-semibold text-skilljar-dark mb-2">LinkedIn</h2>
             <p className="text-sm">Recent Job Change: June 15, 2025</p>
             <p className="text-sm">Global Sales Summit insights</p>
-            <p className="text-sm">New partnership announcement</p>
+            <p className="text-sm">Excited to begin my next chapter as Director of Sales Enablement!</p>
           </div>
           <div className="bg-white rounded-2xl shadow p-6">
             <h2 className="font-semibold text-skilljar-dark mb-2">Re-engagement Suggestions</h2>
             <ul className="text-sm list-disc list-inside">
               <li>Congratulatory email for job promotion</li>
               <li>Recommend advanced product training course</li>
-              <li>Trigger Instagram remarketing campaign</li>
+              <li>Like the kayak photo and trigger Instagram remarketing campaign</li>
             </ul>
           </div>
         </section>
