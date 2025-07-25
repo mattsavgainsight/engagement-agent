@@ -52,7 +52,11 @@ export default function LearnerView() {
             <h2 className="font-semibold text-skilljar-dark mb-2">Re-engagement Suggestions</h2>
             <ul className="text-sm list-disc list-inside">
               <li>Congratulatory email for job promotion</li>
-              <li>Recommend advanced product training course</li>
+               <li>
+    <a href="https://example.com/advanced-product-training" target="_blank" rel="noopener noreferrer">
+      Recommend advanced product training course
+    </a>
+  </li>
               <li>Like the kayak photo and trigger Instagram remarketing campaign</li>
             </ul>
           </div>
