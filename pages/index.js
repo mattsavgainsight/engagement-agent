@@ -53,7 +53,7 @@ export default function LearnerView() {
             <ul className="text-sm list-disc list-inside">
               <li>Congratulatory email for job promotion</li>
                <li>
-    <a href="https://example.com/advanced-product-training" target="_blank" rel="noopener noreferrer">
+    <a href="https://example.com/advanced-product-training" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">
       Recommend advanced product training course
     </a>
   </li>
